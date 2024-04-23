@@ -26,6 +26,7 @@ def register_config(app: Flask):
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config["SECRET_KEY"] = "5678909876567890987654567898765"
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+    app.config['WTF_CSRF_ENABLED'] = False
     return app
 
 def configure_database(app: Flask):
